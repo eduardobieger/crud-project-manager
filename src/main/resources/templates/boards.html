@@ -30,7 +30,7 @@
         <div class="row" style="justify-content: center;">
             <a th:each="boards:${boards}" th:href="@{/boards/{id} (id=${boards.id})}" class="board-list" style="width: 20rem; margin: 2rem; text-decoration: none; color: #000000;">
                 <div class="board text-center" th:styleappend="'background-color: ' + ${boards.backgroundColor}">
-                    <h5 class="card-title" th:text="${boards.title}"></h5>
+                    <h5 class="board-title" th:text="${boards.title}"></h5>
                 </div>
             </a>
         </div>

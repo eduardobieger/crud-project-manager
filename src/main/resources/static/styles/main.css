@@ -21,3 +21,8 @@
 .board-list:hover {
     opacity: 0.75;
 }
+
+.board-title {
+    display: flex;
+    align-items: center;
+}
