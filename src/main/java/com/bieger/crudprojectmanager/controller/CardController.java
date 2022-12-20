@@ -55,7 +55,6 @@ public class CardController {
         foundCard.setTitle(card.getTitle());
         foundCard.setDescription(card.getDescription());
         foundCard.setBackgroundColor(card.getBackgroundColor());
-        foundCard.setListId(card.getListId());
 
         cardService.update(foundCard);
         return "redirect:/boards";

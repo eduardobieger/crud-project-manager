@@ -39,9 +39,6 @@
 				<label for="backgroundColor">Color: </label>
 				<input type="color" class="form-control form-control-color" id="backgroundColor" name="backgroundColor" th:field="*{backgroundColor}">
 			</div>
-			<select name="lists" id="lists">
-				<option th:value="*{listId}"><span th:text="${card.listId}"></span></option>
-			</select>
 			<div class="form-buttons">
 				<button type="submit" class="btn btn-success">Save</button>
 				<a th:href="@{/card/delete/{cardId} (cardId=${card.id})}" class="btn btn-danger">Delete</a>
