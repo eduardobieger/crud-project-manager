@@ -11,13 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "board")
 public class BoardModel {
@@ -34,5 +27,37 @@ public class BoardModel {
 
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
     private List<ListModel> lists;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
+
+    public List<ListModel> getLists() {
+        return lists;
+    }
+
+    public void setLists(List<ListModel> lists) {
+        this.lists = lists;
+    }
 
 }

@@ -19,13 +19,6 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "list")
 public class ListModel {
@@ -48,5 +41,45 @@ public class ListModel {
 
     @OneToMany(mappedBy = "list", cascade = CascadeType.ALL)
     private List<CardModel> cards;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Long getBoardId() {
+        return boardId;
+    }
+
+    public void setBoardId(Long boardId) {
+        this.boardId = boardId;
+    }
+
+    public BoardModel getBoard() {
+        return board;
+    }
+
+    public void setBoard(BoardModel board) {
+        this.board = board;
+    }
+
+    public List<CardModel> getCards() {
+        return cards;
+    }
+
+    public void setCards(List<CardModel> cards) {
+        this.cards = cards;
+    }
 
 }
